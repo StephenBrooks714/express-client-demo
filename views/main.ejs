@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="blue-gradient-rgba">
+<%- include('layouts/navBar') -%>
+<header>
+    <div class="container text-white">
+        <div class="row flex-center d-flex mx-auto" style="height: 100vh;">
+            <div class="col-lg-6 mb-3">
+                <h1 class="display-4 wow fadeIn font-weight-bold">Web Design</h1>
+                <p class="lead wow fadeInLeft">
+                    Here is the main page, now that you have registered and logged in, you can create a post and see it populate here.
+                    Go ahead, give it a try. I built all this with pure JavaScript code.
+                </p>
+                <a href="/newPost" class="btn btn-outline-white wow fadeInUp rounded-pill">New Post</a>
+                <a href="/blogs" class="btn btn-outline-black wow fadeInUp delay-1s rounded-pill">Current Blogs</a>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <img src="/assets/screens-bg.png"
+                     class="img-fluid"
+                     alt="Web Design Demo"
+                />
+            </div>
+        </div>
+    </div>
+</header>
+
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>

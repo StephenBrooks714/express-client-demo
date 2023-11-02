@@ -1,0 +1,107 @@
+<div class="col-lg-12 pt-5">
+
+    <!--Section: Content-->
+    <section class="magazine-section text-white">
+
+        <!-- Section heading -->
+        <h3 class="text-center font-weight-bold mb-4 pb-2">Article Newsfeed</h3>
+        <!-- Section description -->
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-6 col-md-12 mb-4">
+
+                <!-- Featured news -->
+                <div class="single-news">
+
+                    <!-- Image -->
+                    <div class="view overlay rounded z-depth-1-half mb-4">
+                        <img class="img-fluid"
+                             src="https://jbsoftware.ca/wp-content/uploads/web-design.jpg"
+                             alt="Sample image"
+                        />
+                    </div>
+
+                    <!-- Data -->
+                    <div class="news-data d-flex justify-content-between">
+                        <span class="deep-purple-text">
+                            <h6 class="font-weight-bold"><i class="fas fa-code pr-2"></i>Web Development</h6>
+                        </span>
+                        <p class="font-weight-bold text-white"><i class="fas fa-clock-o pr-2"></i>11/02/2023</p>
+                    </div>
+
+                    <!-- Excerpt -->
+                    <h3 class="font-weight-bold text-white mb-3">Blogs With JavaScript</h3>
+                    <p class="text-white">
+                        Everything here was built by me, using JavaScript, Css, Node, and my database with Mongodb.
+                        To the right you see a list of the most recent 6 post, automatically updating to show the
+                        most recent one.
+                    </p>
+
+                </div>
+                <!-- Featured news -->
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-6 col-md-12 mb-4">
+
+                <!-- Small news -->
+                <div class="single-news mb-4">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <% for(i=0; i < blogs.length; i++) { %>
+                            <!-- Grid column -->
+                            <div class="col-md-3">
+
+                                <!--Image-->
+                                <div class="view overlay rounded z-depth-1 mb-4">
+                                    <img class="img-fluid" src="<%= blogs[i].image %>" alt="<%= blogs[i].title %>">
+                                    <a>
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-9">
+
+                                <!-- Excerpt -->
+                                <p class="font-weight-bold text-white"><%= blogs[i].datePosted.toLocaleString() %></p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-11 text-truncate pl-0 mb-3">
+                                        <a href="/post/<%= blogs[i]._id %>" class="text-white">
+                                            <%= blogs[i].body.substring(0, 70) %>
+                                        </a>
+                                    </div>
+                                    <a><i class="fas fa-angle-double-right"></i></a>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+                        <% } %>
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Small news -->
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!-- Grid row -->
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>

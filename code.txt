@@ -1,0 +1,10 @@
+<%- include('layouts/navBar') -%>
+
+<%- include('partials/home-intro') -%>
+
+<div class="container my-5 py-5">
+        <%- include('partials/home-explore') -%>
+        <%- include('partials/home-constructing') -%>
+        <%- include('data/home-slides') -%>
+        <%- include('data/home-blogs') -%>
+    </div>

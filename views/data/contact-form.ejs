@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center flex-center d-flex mx-auto" style="height: 100vh;">
+        <div class="col-md-10 pt-5">
+            <h1 class="text-white-50">Contact Me</h1>
+            <form action="/send/form" method="post" enctype="multipart/form-data">
+                <label for="subject" class="form-label text-white">Subject</label>
+                <input type="text" name="subject" required id="subject" class="form-control mb-3" />
+                <label for="from" class="form-label text-white">Your Email</label>
+                <input type="email" name="from" required id="from" class="form-control mb-3" />
+                <label for="text" class="form-label text-white">Your Message</label>
+                <textarea name="text" id="text" required class="form-control mb-3" rows="7"></textarea>
+                <p class="text-white mb-3">
+                    This was also built with JavaScript, using Google as a smtp for sending.
+                </p>
+                <button class="btn btn-light rounded-pill blue-gradient"
+                        type="submit">send form
+                </button>
+            </form>
+            <script>
+                let form = document.getElementsByTagName("form")[0];
+                form.addEventListener("submit", () => {
+                    alert("Message Sent!!!");
+                });
+            </script>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body class="blue-gradient-rgba">
+<%- include('layouts/navBar') -%>
+<section>
+    <div class="container">
+        <div class="row d-flex align-items-center flex-center mx-auto justify-content-center" style="height: 100vh;">
+            <div class="col-lg-8 pt-5 col-md-10 col-md-12">
+                <h1 class="text-center mb-4 text-white fw-bold">Write A New Blog</h1>
+                <form action="/store/post" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="title" class="form-label text-white">Title</label>
+                            <input type="text" id="title" name="title" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="summary" class="form-label text-white">Summary</label>
+                            <input type="text" name="summary" id="summary" class="form-control" placeholder="short summary">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="image" class="form-label text-white">Photo</label>
+                            <input type="file" id="image" name="image" class="form-control" accept="image/*" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="body" class="form-label text-white">Write Blog</label>
+                            <textarea name="body" id="body" class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary rounded-pill" type="submit">post blog</button>
+                    <button class="btn btn-warning text-white rounded-pill" type="reset">Clear All Fields</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+<%- include('layouts/scripts') -%>
+</html>
