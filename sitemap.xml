@@ -9,4 +9,7 @@
   <url>
     <loc>https://express-client-demo-ac10663dacd0.herokuapp.com/login</loc>
   </url>
+  <url>
+    <loc>https://express-client-demo-ac10663dacd0.herokuapp.com/contact</loc>
+  </url>
 </urlset>
