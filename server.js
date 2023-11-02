@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
+const SitemapGenerator = require('sitemap-generator');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash')
@@ -10,6 +11,17 @@ const session = require('express-session');
 const router = require('./server/router/routes')
 
 require("dotenv").config();
+
+const generator = SitemapGenerator('https://express-client-demo-ac10663dacd0.herokuapp.com/', {
+    stripQuerystring: false
+});
+// register event listeners
+generator.on('done', () => {
+    // sitemaps created
+});
+
+// start the crawler
+generator.start();
 
 app.use(express.static(path.join(__dirname,('public'))))
 app.use(express.static(path.join(__dirname,('node_modules/mdbootstrap-pro/css'))))

@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://express-client-demo-ac10663dacd0.herokuapp.com/sitemap.xml
